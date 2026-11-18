@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+/* Cor principal e fonte do sistema. Para mudar o visual, altere aqui. */
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --color-marca-50: #f0fdfa;
+  --color-marca-100: #ccfbf1;
+  --color-marca-600: #0d9488;
+  --color-marca-700: #0f766e;
+  --color-marca-800: #115e59;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 font-sans text-slate-800 antialiased;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-marca-600;
+  }
+}
